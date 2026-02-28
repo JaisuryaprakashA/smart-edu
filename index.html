@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartEdu Pro - Advanced LMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast hidden"></div>
+
+    <!-- LOGIN VIEW -->
+    <div id="login-view" class="view active-view">
+        <div class="login-box">
+            <div class="brand">🎓 iSpark</div>
+            <p>Welcome back! Please login to your account.</p>
+            <input type="text" id="loginUsername" placeholder="Username">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <button onclick="app.login()">Login</button>
+            <div class="login-hint">First time? Login as Admin (admin / admin123)</div>
+        </div>
+    </div>
+
+    <!-- MAIN DASHBOARD VIEW -->
+    <div id="dashboard-view" class="view hidden">
+        <div class="sidebar">
+            <div class="brand">🎓 iSpark</div>
+            <div class="user-badge" id="sidebar-user-name">User Name</div>
+            <div class="user-role" id="sidebar-user-role">Role</div>
+            <hr>
+            <div id="nav-menu" class="nav-menu">
+                <!-- Nav buttons injected dynamically via JS based on role -->
+            </div>
+            <button class="logout-btn" onclick="app.logout()">Logout</button>
+        </div>
+
+        <div class="main-content" id="main-content">
+            <!-- Dynamic Content injected here via JS -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
