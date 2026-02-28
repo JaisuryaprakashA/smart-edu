@@ -1,0 +1,2 @@
+# smart-edu
+school project
